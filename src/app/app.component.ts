@@ -4,13 +4,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any = HomePage; //this used to have 'TabsPage' as rootPage. Because of this I IMPORTED HOMEPAGE
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
