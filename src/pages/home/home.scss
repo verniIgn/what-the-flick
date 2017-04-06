@@ -1,6 +1,62 @@
 page-home {
+  text-align: center;
+  position: relative;
+
+
   .background {
     background: url('../build/img/landing.jpg') no-repeat;
     background-size: cover;
   }
+
+  h2 {
+    color: red;
+  }
+
+  .letsplay {
+    // position: center;
+    // left: 50%;
+    // top: 75%;
+    // margin: auto;
+    // margin: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    // margin-left: 130px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: black;
+    font-weight: bold;
+
+  }
+.rules {
+    width: auto;
+    margin: auto;
+    display: block;
+    padding-left: 78px;
+    padding-right: 78px;
+    color: black;
+    font-weight: bold;
+}
+.stats {
+    width: auto;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    padding-left: 65px;
+    padding-right: 65px;
+    color: black;
+    font-weight: bold;
+}
+img {
+
+   margin-top: -90px;
+   margin-bottom: 80px;
+
+  bottom: 150px;
+
+}
+
+
+
+
+
 }
