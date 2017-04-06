@@ -6,6 +6,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RulesPage } from '../pages/rules/rules';
+import { TestactorPage } from '../pages/testactor/testactor';
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -18,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    RulesPage
+    RulesPage,
+    TestactorPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    RulesPage
+    RulesPage,
+    TestactorPage
   ],
   providers: [
     StatusBar,
