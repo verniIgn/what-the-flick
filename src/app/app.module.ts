@@ -7,7 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RulesPage } from '../pages/rules/rules';
 import { TestactorPage } from '../pages/testactor/testactor';
-
+import { Testactor } from '../providers/testactor';
+import { EnterNamesPage } from '../pages/enter-names/enter-names';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,7 +22,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     RulesPage,
-    TestactorPage
+    TestactorPage,
+    EnterNamesPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -34,12 +36,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     RulesPage,
-    TestactorPage
+    TestactorPage,
+    EnterNamesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Testactor
   ]
 })
 export class AppModule {}
+

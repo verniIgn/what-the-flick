@@ -8,7 +8,7 @@
 
 <!-- <div class="row"> -->
 
-        <img class="logo" src="../build/img/logo.png">
+        <img class="logo" src="/assets/img/logo.png">
 
 <!-- </div> -->
 
@@ -17,7 +17,7 @@
 
   <!-- <h2>Welcome to Ionic!</h2> -->
 
-  <button ion-button round medium color="secondary" class="letsplay">Let's Play!</button>
+  <button [navPush]="enterNames" ion-button round medium color="secondary" class="letsplay">Let's Play!</button>
 
   <button [navPush]="rulesPage" ion-button round medium color="danger" class="rules">Rules</button>
 

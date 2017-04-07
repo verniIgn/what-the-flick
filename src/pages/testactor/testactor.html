@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>testactor</ion-title>
+    <ion-title></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <div *ngFor= "let movie of movies">
+    <h2>{{ movie.id }} is {{ movie.name }} </h2>
+    <!-- dimensions set using inline styles -->
+    <ion-avatar item-left>
+      <img style="width: 80px; height: 80px;" src="http://image.tmdb.org/t/p/w342{{ movie.profile_path }}">
+    </ion-avatar>
+  </div>
 </ion-content>
