@@ -9,6 +9,7 @@ import { RulesPage } from '../pages/rules/rules';
 import { TestactorPage } from '../pages/testactor/testactor';
 import { Testactor } from '../providers/testactor';
 import { EnterNamesPage } from '../pages/enter-names/enter-names';
+import { EnterFirstActorPage } from '../pages/enter-first-actor/enter-first-actor';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -23,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     RulesPage,
     TestactorPage,
-    EnterNamesPage
+    EnterNamesPage,
+    EnterFirstActorPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -37,7 +39,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     RulesPage,
     TestactorPage,
-    EnterNamesPage
+    EnterNamesPage,
+    EnterFirstActorPage
   ],
   providers: [
     StatusBar,

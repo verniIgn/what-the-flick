@@ -1,0 +1,31 @@
+<!--
+  Generated template for the EnterFirstActor page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Chose an Artist </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <h3>{{ name1 }} plase enter an actor/actress to start the game</h3>
+  <br>
+   <form (ngSubmit)="logForm()">
+
+        <ion-item>
+            <ion-label>Name:</ion-label>
+            <ion-input type="text" [(ngModel)]="names.player1" name="actor1"></ion-input>
+        </ion-item>
+
+
+
+        <button ion-button (click)="launchFirstActorPage()" type="submit" block>Let's Play!</button>
+
+    </form>
+
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { EnterFirstActorPage } from '../enter-first-actor/enter-first-actor';
 
 /*
   Generated class for the EnterNames page.
@@ -12,6 +13,7 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'enter-names.html'
 })
 export class EnterNamesPage {
+  enterFirstActor = EnterFirstActorPage;
 
   names = {};
 
@@ -19,10 +21,17 @@ export class EnterNamesPage {
     console.log(this.names)
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EnterNamesPage');
+  }
+
+  launchFirstActorPage() {
+    let playerNames = this.names;
+
+    this.navCtrl.push(EnterFirstActorPage, playerNames);
   }
 
 }
