@@ -13,12 +13,19 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class EnterFirstActorPage {
   name1: any;
+  actorQuery: any;
+
+logForm() {
+    // console.log(this.)
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-
     this.name1 = this.navParams.get('player1');
   }
-
+  PrintQuery() {
+    let search = this.actorQuery;
+    console.log(search);
+  }
 }

@@ -19,12 +19,10 @@
 
         <ion-item>
             <ion-label>Name:</ion-label>
-            <ion-input type="text" [(ngModel)]="names.player1" name="actor1"></ion-input>
+            <ion-input [(ngModel)]="actorQuery" type="text" name="name"></ion-input>
         </ion-item>
 
-
-
-        <button ion-button (click)="launchFirstActorPage()" type="submit" block>Let's Play!</button>
+        <button ion-button (click)="PrintQuery()" type="submit" >Check!</button>
 
     </form>
 
