@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { FindActor } from '../../providers/find-actor';
 
 /*
   Generated class for the EnterFirstActor page.
@@ -12,20 +13,31 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'enter-first-actor.html'
 })
 export class EnterFirstActorPage {
-  name1: any;
+  names: any;
   actorQuery: any;
+  playerOne: any;
 
 logForm() {
     // console.log(this.)
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public findActorService: FindActor) {}
 
   ionViewDidLoad() {
-    this.name1 = this.navParams.get('player1');
+    this.playerOne = this.navParams.get('player1');
+    //here call the service (video: 12:05)
+    // this.findActorService.getActorsPic();
+    this.names = null;
+    this.actorQuery = null;
   }
-  PrintQuery() {
+  //click function
+  storeQuery() {
     let search = this.actorQuery;
-    console.log(search);
+    // console.log(search);
+    this.findActorService.getActorsPic(search).then((actor) => {
+    this.names = actor;
+    });
   }
 }
+
+//getactorphoto

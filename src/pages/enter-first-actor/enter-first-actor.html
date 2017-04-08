@@ -5,25 +5,31 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title> Chose an Artist </ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-title> Chose an Artist </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <h3>{{ name1 }} plase enter an actor/actress to start the game</h3>
-  <br>
-   <form (ngSubmit)="logForm()">
+    <h3>{{ playerOne }} plase enter an actor/actress to start the game</h3>
+    <br>
 
+    <form (ngSubmit)="logForm()">
         <ion-item>
             <ion-label>Name:</ion-label>
             <ion-input [(ngModel)]="actorQuery" type="text" name="name"></ion-input>
         </ion-item>
-
-        <button ion-button (click)="PrintQuery()" type="submit" >Check!</button>
-
+        <button ion-button (click)="storeQuery()" type="submit">Check!</button>
     </form>
 
+    <p>list of actors</p>
+
+    <div *ngFor="let name of names">
+        <h2>{{ name.id }} is {{ name.name }} </h2>
+
+        <!-- dimensions set using inline styles -->
+        <ion-avatar item-left>
+            <img style="width: 80px; height: 80px;" src="http://image.tmdb.org/t/p/w342{{ name.profile_path }}">
+        </ion-avatar>
+    </div>
 </ion-content>
