@@ -1,0 +1,33 @@
+<!--
+  Generated template for the EnterMovie page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>enterMovie</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <p>Title!!!!</p>
+    <!--  <div *ngFor="let movie of allMovies">
+   <p> {{ movie.title }} </p>
+   </div> -->
+    <form (ngSubmit)="logForm()">
+        <ion-item>
+            <ion-label>Name:</ion-label>
+            <ion-input [(ngModel)]="searchMovie" type="text" name="name"></ion-input>
+        </ion-item>
+        <button ion-button block (click)="findMovie()" type="submit">FIND THE MOVIE!</button>
+    </form>
+    <div>
+    <!-- <template> -->
+        <h1>Correct! - {{name}} was in {{ correctMovie }}</h1>
+        <h3>{{name}}'s character was </h3>
+   <img src="https://image.tmdb.org/t/p/w500{{correctPoster}}">
+  <!-- </template> -->
+  </div>
+
+
+</ion-content>

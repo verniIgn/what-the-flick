@@ -6,28 +6,45 @@
 -->
 <ion-header>
     <ion-navbar>
-        <ion-title>Enter Player's Names</ion-title>
+        <ion-title>Enter your names</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <form (ngSubmit)="logForm()">
+<ion-content  class="background">
+  <div class="form-row">
+    <ion-list (ngSubmit)="logForm()" no-lines >
 
         <ion-item>
-            <ion-label>Player 1</ion-label>
+            <ion-label floating>Player 1</ion-label>
             <ion-input type="text" [(ngModel)]="names.player1" name="player1"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label>Player 2</ion-label>
+            <ion-label floating>Player 2</ion-label>
             <ion-input type="text" [(ngModel)]="names.player2" name="player1"></ion-input>
         </ion-item>
 
         <button ion-button (click)="launchFirstActorPage()" type="submit" block>Let's Play!</button>
 
-    </form>
+    </ion-list>
 
+  </div>
+  <nav>
+    <ul class="nav">
+        <li>
+          <a href="#" (click)="launchFirstActorPage()">
+            <span class="icon-home"><p>Start!</p></span>
+            <span class="screen-reader-text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon-cog"></span>
+            <span class="screen-reader-text">Settings</span>
+          </a></li>
 
+    </ul>
+</nav>​
 </ion-content>
 
 

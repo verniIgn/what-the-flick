@@ -6,30 +6,65 @@
 -->
 <ion-header>
     <ion-navbar>
-        <ion-title> Chose an Artist </ion-title>
+        <ion-title> {{ playerOne }} </ion-title>
     </ion-navbar>
 </ion-header>
-
 <ion-content>
-    <h3>{{ playerOne }} plase enter an actor/actress to start the game</h3>
+    <strong><p> {{ playerOne }}, please choose an artist</p></strong>
     <br>
-
     <form (ngSubmit)="logForm()">
         <ion-item>
             <ion-label>Name:</ion-label>
             <ion-input [(ngModel)]="actorQuery" type="text" name="name"></ion-input>
         </ion-item>
-        <button ion-button (click)="storeQuery()" type="submit">Check!</button>
+        <button ion-button block (click)="storeQuery()" type="submit">Check!</button>
     </form>
 
-    <p>list of actors</p>
+
 
     <div *ngFor="let name of names">
-        <h2>{{ name.id }} is {{ name.name }} </h2>
+        <ion-card>
+            <ion-card-title class="center-text">
+             <ion-icon name="star-outline"></ion-icon>
+                {{ name.name }}
+                {{name.id}}
 
-        <!-- dimensions set using inline styles -->
-        <ion-avatar item-left>
-            <img style="width: 80px; height: 80px;" src="http://image.tmdb.org/t/p/w342{{ name.profile_path }}">
-        </ion-avatar>
+                 <ion-icon name="star-outline"></ion-icon>
+
+
+            </ion-card-title>
+            <img  src="http://image.tmdb.org/t/p/w342{{ name.profile_path }}">
+            <ion-card-content>
+            <ion-icon name="trending-up"></ion-icon>
+            <!-- <button ion-button small>Small</button> -->
+            <ion-list>
+              <ion-item>
+                Is this the artist you want?
+
+
+                <button ion-button item-right (click)="passId()">
+                  <ion-icon ></ion-icon>
+                  Yes! Go!
+                </button>
+
+              </ion-item>
+            </ion-list>
+                <p>
+                    The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                </p>
+            </ion-card-content>
+        </ion-card>
     </div>
+
+<!-- <div *ngFor="let movie of allMovies">
+ <h1> {{ allMovies.character }} </h1>
+</div> -->
+
+
+
+
+
+
+
+
 </ion-content>

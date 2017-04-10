@@ -15,7 +15,7 @@ import { EnterFirstActorPage } from '../enter-first-actor/enter-first-actor';
 export class EnterNamesPage {
   enterFirstActor = EnterFirstActorPage;
 
-  names = {};
+  names = [];
 
   logForm() {
     console.log(this.names)

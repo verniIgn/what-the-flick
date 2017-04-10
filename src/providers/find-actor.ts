@@ -12,24 +12,24 @@ import 'rxjs/add/operator/map';
 export class FindActor {
 
   actors: any;
+  movies: any;
 
 
   constructor(public http: Http) {
     console.log('Hello FindActor Provider');
     this.actors = null;
-
+    this.movies = null; //???
   }
 
   getActorsPic(search: string) {
-    this.actors = null;
-    console.log('hello', search);
+    this.actors = null;  //???
+    // console.log('hello', search);
     // console.log(this.actors);
      if (this.actors) {
       return Promise.resolve(this.actors);
     }
 
     return new Promise(resolve => {
-
       this.http.get('http://api.tmdb.org/3/search/person?api_key=3c0ac109cf1f3540a0a2170906ec36ff&query=' + search)
         .map(res => res.json().results)
         .subscribe(data => {
@@ -39,8 +39,6 @@ export class FindActor {
         });
         // console.log(this.actors);
       });
-
   }
-
 }
 
