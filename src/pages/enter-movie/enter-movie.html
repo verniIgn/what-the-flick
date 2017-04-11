@@ -6,9 +6,11 @@
 -->
 <ion-header>
     <ion-navbar>
-        <ion-title>{{player1}} | POINTS | {{player2}}</ion-title>
+        <ion-title> {{player1}} | POINTS | {{player2}} </ion-title>
     </ion-navbar>
 </ion-header>
+
+
 <ion-content>
     <strong><h2>{{player1}}, your turn!</h2></strong>
     <p>Enter the full title of a movie <strong>{{name}}</strong> was in</p>
@@ -22,16 +24,15 @@
         </ion-item>
         <button ion-button block (click)="findMovie()" type="submit">FIND THE MOVIE!</button>
     </form>
-    <div *ngIf="correctMovie && {{player1}} ">
+    <div *ngIf="correctMovie !== null">
         <ion-card>
             <ion-card-title class="center-text">
-                <h1>Correct! </h1>
+                <h1>Correct! </h1> {{player1}}
                 <h2>{{name}}'s character's name was <strong>'{{ character }}'</strong></h2>
             </ion-card-title>
-            <!-- <h3>{{name}}'s character name's was </h3> -->
             <img src="https://image.tmdb.org/t/p/w500{{correctPoster}}">
             <button ion-button round medium color="danger">Choose Different Artist!</button>
-            <button ion-button round medium color="secondary">Next Turn!</button>
+            <button ion-button round medium (click)="cycle()" color="secondary">Next Turn!</button>
             <ion-card-content>
                 <ion-list>
                     <ion-item>
@@ -48,4 +49,37 @@
             </ion-card-content>
         </ion-card>
     </div>
+  <div *ngIf="correct === false">
+        <ion-card>
+            <ion-card-title class="center-text">
+                <h1>That's Wrong </h1> {{player1}}
+                <h2>{{name}} was not part of that movie, or the title is not correct.</h2>
+            </ion-card-title>
+
+            <button ion-button round medium color="secondary">Next Turn!</button>
+            <ion-card-content>
+                <!-- text -->
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ion-content>
