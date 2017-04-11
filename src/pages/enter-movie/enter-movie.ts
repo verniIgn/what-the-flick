@@ -34,6 +34,8 @@ export class EnterMoviePage {
   correctMovie: any;
   correctPoster: any;
   name: any; //holds ONE actors name
+  lastMovieId: any;
+  character: any;
 
 logForm() {
     // console.log(this.)
@@ -47,9 +49,9 @@ logForm() {
     this.allMovies = null;
     this.searchMovie = null;
     this.correctMovie = null;
-    this.correctPoster = null;
+    // this.correctPoster = null;
     this.name = null;
-
+    this.character = null;
 
     this.id = this.navParams.get('id');
     this.name = this.navParams.get('name');
@@ -65,7 +67,6 @@ logForm() {
     console.log('This is the data after passing it ' + actorId);
 
     this.findMoviesService.getAllMovies(actorId).then((movies: any) => {
-      console.log('object?', movies);
     // this.cast = movies.cast;
     this.allMovies = movies.cast;
 
@@ -75,6 +76,10 @@ logForm() {
   }
 
   findMovie() {
+    this.correctMovie = null;
+    this.correctPoster = null;
+    this.lastMovieId = null;
+    this.character = null;
     let movieQuery = this.searchMovie;
     console.log(movieQuery);
 
@@ -83,15 +88,19 @@ logForm() {
         console.log('console this:', this.allMovies[i].original_title)
         this.correctMovie = this.allMovies[i].original_title;
         this.correctPoster = this.allMovies[i].poster_path;
-
-      } else if (movieQuery !== this.allMovies[i].original_title.toLowerCase()) {
-
+        this.lastMovieId = this.allMovies[i].id;
+        this.character = this.allMovies[i].character;
 
       }
+      // else if (movieQuery !== this.allMovies[i].original_title.toLowerCase()) {
+      // }
     }
 
   }
-
+  cycle() {
+     // <div *ngIf="show; else elseBlock">Text to show</div>
+    // <ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>
+  }
 
 
 }

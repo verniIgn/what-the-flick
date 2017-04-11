@@ -6,7 +6,7 @@
 -->
 <ion-header>
     <ion-navbar>
-        <ion-title> {{ playerOne }} </ion-title>
+        <ion-title> Title </ion-title>
     </ion-navbar>
 </ion-header>
 <ion-content>
@@ -19,52 +19,31 @@
         </ion-item>
         <button ion-button block (click)="storeQuery()" type="submit">Check!</button>
     </form>
-
-
-
     <div *ngFor="let name of names">
         <ion-card>
             <ion-card-title class="center-text">
-             <ion-icon name="star-outline"></ion-icon>
-                {{ name.name }}
-                {{name.id}}
-
-                 <ion-icon name="star-outline"></ion-icon>
-
-
+                <strong>{{ name.name }}</strong>
             </ion-card-title>
-            <img  src="http://image.tmdb.org/t/p/w342{{ name.profile_path }}">
+            <img src="http://image.tmdb.org/t/p/w342{{ name.profile_path }}">
             <ion-card-content>
-            <ion-icon name="trending-up"></ion-icon>
-            <!-- <button ion-button small>Small</button> -->
-            <ion-list>
-              <ion-item>
-                Is this the artist you want?
-
-
-                <button ion-button item-right (click)="passId()">
-                  <ion-icon ></ion-icon>
-                  Yes! Go!
-                </button>
-
-              </ion-item>
-            </ion-list>
-                <p>
+                <!-- <ion-icon name="trending-up"></ion-icon> -->
+                <!-- <button ion-button small>Small</button> -->
+                <ion-list>
+                    <ion-item>
+                        Is this the artist you want?
+                        <button ion-button item-right large (click)="passId()">
+                            <ion-icon></ion-icon>
+                            START
+                        </button>
+                    </ion-item>
+                </ion-list>
+                <!--  <p>
                     The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-                </p>
+                </p> -->
             </ion-card-content>
         </ion-card>
     </div>
-
-<!-- <div *ngFor="let movie of allMovies">
+    <!-- <div *ngFor="let movie of allMovies">
  <h1> {{ allMovies.character }} </h1>
 </div> -->
-
-
-
-
-
-
-
-
 </ion-content>
