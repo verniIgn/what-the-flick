@@ -4,32 +4,33 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-    <ion-navbar>
-        <ion-title>Enter your names</ion-title>
+<ion-header >
+    <ion-navbar color="black">
+        <ion-title >Enter your names</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content  class="background">
-    <div>
-    <strong><h1>Ready to show that you're a real movie fan?</h1></strong>
-    <br>
-    <h2>Enter your name:</h2>
+<ion-content padding-top class="background">
+    <div class="topdiv">
+    <strong><h1 class="title2">Ready to show that you're a real movie fan?</h1></strong>
+    <!-- <br> -->
+    <h2 class="promt">Enter your name:</h2>
     </div>
+
   <div class="form-row">
-    <ion-list (ngSubmit)="logForm()" no-lines >
+    <ion-list (ngSubmit)="logForm()">
 
         <ion-item>
-            <ion-label floating>Player 1</ion-label>
+            <ion-label floating class="promt2">Player 1</ion-label>
             <ion-input type="text" [(ngModel)]="names.player1" name="player1"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label floating>Player 2</ion-label>
+            <ion-label class="promt2" floating>Player 2</ion-label>
             <ion-input type="text" [(ngModel)]="names.player2" name="player1"></ion-input>
         </ion-item>
 
-        <button ion-button (click)="launchFirstActorPage()" type="submit" block>Let's Play!</button>
+        <button outline class="down" class="playButton" ion-button color="main" (click)="launchFirstActorPage()" type="submit" block>Let's Play!</button>
 
     </ion-list>
 

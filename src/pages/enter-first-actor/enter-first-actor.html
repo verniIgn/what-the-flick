@@ -4,39 +4,56 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-    <ion-navbar>
-        <ion-title> Title </ion-title>
+<ion-header no-border>
+    <ion-navbar color="black">
+        <ion-title> - Choose an actor - </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content>
-    <strong><p> {{ playerOne }}, please choose an artist</p></strong>
+<ion-content padding-top class="background">
+      <h1 class="title1">{{ playerOne }}</h1>
+      <h2 class="tag">Your Turn!</h2>
+    <strong><h3 class="title2"> Choose an actor to start the game</h3></strong>
     <br>
-    <form (ngSubmit)="logForm()">
-        <ion-item>
-            <ion-label>Name:</ion-label>
-            <ion-input [(ngModel)]="actorQuery" type="text" name="name"></ion-input>
-        </ion-item>
-        <button ion-button block (click)="storeQuery()" type="submit">Check!</button>
-    </form>
+    <ion-grid>
+        <ion-row center>
+            <ion-col col-12 center>
+                <div class="form-row">
+
+
+                    <form (ngSubmit)="logForm()">
+                        <ion-item>
+                            <ion-label floating class="inputlabel">Full Name:</ion-label>
+                            <ion-input [(ngModel)]="actorQuery" type="text" name="name"></ion-input>
+                        </ion-item>
+                        <button outline ion-button block outline class="down" class="playButton" (click)="storeQuery()" type="submit">Check!</button>
+                    </form>
+
+
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
     <div *ngFor="let name of names">
         <ion-card>
             <ion-card-title class="center-text">
                 <strong>{{ name.name }}</strong>
             </ion-card-title>
             <img src="http://image.tmdb.org/t/p/w342{{ name.profile_path }}">
-            <ion-card-content>
+            <ion-card-content class="inner" padding-left>
                 <!-- <ion-icon name="trending-up"></ion-icon> -->
                 <!-- <button ion-button small>Small</button> -->
-                <ion-list>
+                <ion-list class="changeColor">
                     <ion-item>
-                        Is this the artist you want?
-                        <button ion-button item-right large (click)="passId()">
-                            <ion-icon></ion-icon>
-                            START
-                        </button>
+                        <!-- <ion-row wrap> -->
+                        <h5 class="cardtext">Is this the actor you're looking for?</h5>
+
+                        <!-- </ion-row> -->
                     </ion-item>
                 </ion-list>
+
+                 <button center class="down" class="playButton1" ion-button large (click)="passId()">
+                            Yes!
+                        </button>
                 <!--  <p>
                     The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
                 </p> -->

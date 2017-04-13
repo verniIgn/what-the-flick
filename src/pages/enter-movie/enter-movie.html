@@ -5,42 +5,49 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="black">
         <ion-title> {{player1}} | POINTS | {{player2}} </ion-title>
     </ion-navbar>
 </ion-header>
-
-
-<ion-content>
-    <strong><h2>{{player1}}, your turn!</h2></strong>
-    <p>Enter the full title of a movie <strong>{{name}}</strong> was in</p>
-    <!--  <div *ngFor="let movie of allMovies">
-   <p> {{ movie.title }} </p>
-   </div> -->
-    <form (ngSubmit)="logForm()">
-        <ion-item>
-            <ion-label>Name:</ion-label>
-            <ion-input [(ngModel)]="searchMovie" type="text" name="name"></ion-input>
-        </ion-item>
-        <button ion-button block (click)="findMovie()" type="submit">FIND THE MOVIE!</button>
-    </form>
+<ion-content padding-top class="background">
+    <!-- <strong><h2>{{player1}}, your turn!</h2></strong>
+    <p>Enter the full title of a movie <strong>{{name}}</strong> was in</p> -->
+    <h1 class="title1">{{ player1 }}</h1>
+    <h2 class="tag">Your Turn!</h2>
+    <strong><h3 class="title2"> Enter the full title of a movie <strong>{{name}}</strong> was in</h3>
+    </strong>
+    <br>
+    <div class="form-row">
+        <form (ngSubmit)="logForm()">
+            <ion-item>
+                <ion-label class="inputlabel">Full Movie Title:</ion-label>
+                <ion-input [(ngModel)]="searchMovie" type="text" name="name"></ion-input>
+            </ion-item>
+            <button outline ion-button block outline class="down" class="playButton" (click)="findMovie()" type="submit">FIND THE MOVIE!</button>
+        </form>
+    </div>
     <div *ngIf="correctMovie !== null">
         <ion-card>
             <ion-card-title class="center-text">
-                <h1>Correct! </h1> {{player1}}
+                <h1 class="center-text">That's Correct! </h1>
+                <hr>
                 <h2>{{name}}'s character's name was <strong>'{{ character }}'</strong></h2>
             </ion-card-title>
-            <img src="https://image.tmdb.org/t/p/w500{{correctPoster}}">
-            <button ion-button round medium color="danger">Choose Different Artist!</button>
-            <button ion-button round medium (click)="cycle()" color="secondary">Next Turn!</button>
+            <!-- <div class="special">
+
+            </div> -->
             <ion-card-content>
-                <ion-list>
-                    <ion-item>
-                        Is this
-                        <button ion-button item-right large>
-                            <ion-icon></ion-icon>
-                            START
+                <img src="https://image.tmdb.org/t/p/w500{{correctPoster}}">
+                <ion-list class="changeColor">
+                    <ion-item class="cardtext1">
+                        <button (click)="branch()" outline large class="playButton" ion-button medium>Choose Different Actor</button>
+                    </ion-item>
+
+                    <ion-item class="cardtext">
+                    <button outline center class="down" color="danger"class="playButton1" ion-button large>
+                            I Give Up!
                         </button>
+                        <button outline ion-button large (click)="changePlayers()" color="secondary">Next Turn!</button>
                     </ion-item>
                 </ion-list>
                 <!--  <p>
@@ -49,37 +56,41 @@
             </ion-card-content>
         </ion-card>
     </div>
-  <div *ngIf="correct === false">
+
+    <div *ngIf="correct === false">
         <ion-card>
             <ion-card-title class="center-text">
                 <h1>That's Wrong </h1> {{player1}}
                 <h2>{{name}} was not part of that movie, or the title is not correct.</h2>
             </ion-card-title>
-
             <button ion-button round medium color="secondary">Next Turn!</button>
             <ion-card-content>
                 <!-- text -->
             </ion-card-content>
         </ion-card>
     </div>
+    <div *ngIf="showBranch === true">
+        <div text-wrap>
+            <ion-title>
+                <h3 text-wrap class="title6">Ok {{player1}}, let's change the actor.
+            The last correct title was {{ correctMovie }}
+           </h3>
+            </ion-title>
+        </div>
 
+    <div class="form-row">
+        <form (ngSubmit)="logForm()">
+            <!-- <ion-item text-wrap> -->
+            <ion-label text-wrap class="title5">Enter ANOTHER actor that was in {{correctMovie}}</ion-label>
+            <br>
+            <ion-input floating class="promt2" [(ngModel)]="searchAnotherActor" name="cast" type="text"></ion-input>
+            <!-- </ion-item> -->
+            <div class="centerIt">
+                <button outline ion-button class="down" class="playButton2" color="secondary" large (click)="searchNewActor()" type="submit">FIND NEW ACTOR!</button>
+            </div>
+        </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+  </div>
 
 </ion-content>

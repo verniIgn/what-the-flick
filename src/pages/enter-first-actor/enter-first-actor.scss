@@ -1,5 +1,115 @@
 page-enter-first-actor {
-  .center-text {
+
+
+  .background {
+     background: url('/assets/img/backblur.jpg') repeat;
+    background-size: cover;
+  }
+  .changeColor {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  // .ion-card{
+  //   background-color: #0abdd8;
+
+  // }
+  .title2 {
+    color: #00FFFF;
+    font-family: $font-family-base;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .tag {
+    color: #00FFFF;
+    font-family: $font-family-base;
+    text-align: center;
+    font-size: 30px;
+  }
+  .title1 {
+    color: #00FFFF;
+    font-family: $font-family-base;
+    text-align: center;
+    font-size: 40px;
+  }
+  .cardtext {
+    color: #00FFFF;
+    font-family: $font-family-base;
+    text-align: center;
+     margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+    color: black;
+    // font-size: 1.1em;
+
+  }
+  .centerButton {
+     margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .inner {
+    // background-color: transparent;
+  }
+  .card .item{
+  background: transparent;
+}
+.card .item h4 {
+font-size: 20px;
+}
+.form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 2em;
+    text-align: center;
+  }
+  .item.item-input {
+    background-color: transparent;
+    margin-bottom: 30px;
+}
+
+.label.label-ios {
+  margin-bottom: 40px;
+
+}
+.item.item-block.item-input {
+  color: white;
+  font-weight:bold;
+
+}
+.playButton {
+    color: #00FFFF;
+    font-family: $font-family-base;
+    // text-align: center;
+    font-size: 1.4em;
+    // margin-top: 60px;
+  }
+  .playButton1 {
+    color: #00FFFF;
+    font-family: $font-family-base;
+    text-align: center;
+    font-size: 1.4em;
+    // margin-top: 60px;
+     margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+
+.item.item-block.item-ios.item-label-floating.item-input  {
+border-top: none;
+}
+.inputlabel {
+  color: #00FFFF;
+    font-family: $font-family-base;
+}
+
+.center-text {
    text-align: center;
+   color: red, bold;
+    font-family: $font-family-base;
+    font-size: 2em;
+
 }
 }

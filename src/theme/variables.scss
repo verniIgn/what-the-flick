@@ -14,7 +14,13 @@ $font-path: "../assets/fonts";
 
 
 $card-ios-border-radius: 20px;
-
+$card-ios-background-color: linear-gradient(to right, #0abdd8, transparent);
+$card-md-background-color: transparent;
+$card-wp-background-color: transparent;
+$card-ios-border-radius: 28px;
+// $card-ios-header-color: #f53d3d;
+// $card-ios-margin-bottom: 160px;
+// $card-ios-box-shadow-color: rgb(219, 10, 129);
 
 // Named Color Variables
 // --------------------------------------------------
@@ -29,8 +35,14 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  black:      #000,
+  main:       #0abdd8
 );
+
+
+
+
 
 
 // App iOS Variables

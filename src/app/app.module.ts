@@ -22,6 +22,7 @@ import { EnterMovie } from '../providers/enter-movie';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 // import { CommonModule } from '@angular/common';
 // import { BrowserModule } from '@angular/platform-browser';
 

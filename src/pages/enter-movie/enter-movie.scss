@@ -1,3 +1,169 @@
 page-enter-movie {
+  .background {
+     background: url('/assets/img/backblur.jpg') repeat;
+    background-size: cover;
+  }
+  .title2 {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .title5 {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+    padding-top: 40px;
+    margin: 30px;
+    margin-left: 30px;
+  }
+  .title6 {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+    padding-top: 40px;
+    // margin: 30px;
+    margin-left: -30px;
+  }
+  .tag {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+    font-size: 30px;
+  }
+  .promt2 {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+    font-size: 1.4em;
+  }
+  .title1 {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+    font-size: 40px;
+  }
+  .inputlabel {
+  color: #0abdd8;
+    font-family: $font-family-base;
+}
+.playButton {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    // text-align: center;
+    font-size: 1.4em;
+    // margin-top: 60px;
+  }
+  .form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 2em;
+    text-align: center;
+  }
+  .form-row2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 2em;
+    text-align: center;
+  }
+  .item.item-input {
+    background-color: transparent;
+    margin-bottom: 30px;
+  }
+  .changeColor {
+     margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 
+   .card .item{
+  background: transparent;
+  }
+  .inputlabel {
+  color: #0abdd8;
+    font-family: $font-family-base;
+  }
+  .cardtext {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+     // margin-left: auto;
+    // margin-right: auto;
+    // display: block !important;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .cardtext1 {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+     // margin-left: auto;
+    // margin-right: auto;
+    display: block !important;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .cardtext2 {
+    // color: #0abdd8;
+    font-family: $font-family-base;
+    text-align: center;
+     // margin-left: auto;
+    // margin-right: auto;
+    display: block !important;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .cardtext3 {
+    color: blue;
+    font-family: $font-family-base;
+    text-align: center;
+     // margin-left: auto;
+    // margin-right: auto;
+    display: block !important;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .special {
+    padding-bottom: 40px;
+  }
+  .item.item-block.item-input {
+  color: white;
+  font-weight:bold;
+  }
+  .center-text {
+   text-align: center;
+   color: red, bold;
+    font-family: $font-family-base;
+    font-size: 2em;
+    // padding-top: 40px;
+  }
+  .playButton {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    margin-left: -10px;
+    // margin-right: 20px;
+    // text-align: center;
+    // font-size: 1.4em;
+    // margin-top: 60px;
+  }
+  .playButton2 {
+    color: #0abdd8;
+    font-family: $font-family-base;
+    margin-left: -10px;
+    margin-right: 20px;
+    text-align: center;
+    // font-size: 1.4em;
+    // margin-top: 60px;
+  }
+  .centerIt{
+     margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
